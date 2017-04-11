@@ -1,0 +1,41 @@
+.screen {
+  padding-top: 150px;
+  padding-bottom: 70px;
+  &-description {
+    font-size: 18px;
+    margin-bottom: 60px;
+    p {
+      margin-bottom: 20px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &-btn {
+    display: block;
+    margin: 0 auto;
+    border-right: 3px;
+    color: #fff;
+    font-size: 18px;
+    background: $red-bg;
+    line-height: 42px;
+    padding: 0 60px;
+    &:hover {
+      background: lighten($red-bg, 5%);
+      color: #fff;
+      text-shadow: 2px 2px 5px $red-txt;
+    }
+  }
+}
+
+.first-screen {
+  background: url("../img/bg1_1.png") no-repeat;
+  background-position: -42% -281px;
+  background-size: 51%;
+  .screen-heading {
+    font-size: 54px;
+    text-align: center;
+    max-width: 50%;
+    margin: 0 auto 60px;
+  }
+}
