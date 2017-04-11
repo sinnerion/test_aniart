@@ -8206,11 +8206,16 @@ button.close {
   margin-right: 40px; }
 
 .login-block .search-link {
+  font-family: 'FontAwesome';
   color: #666; }
 
 .screen {
+  position: relative;
   padding-top: 150px;
   padding-bottom: 70px; }
+  .screen-heading {
+    font-size: 46px;
+    margin-bottom: 55px; }
   .screen-description {
     font-size: 18px;
     margin-bottom: 60px; }
@@ -8220,7 +8225,6 @@ button.close {
       margin-bottom: 0; }
   .screen-btn {
     display: block;
-    margin: 0 auto;
     border-right: 3px;
     color: #fff;
     font-size: 18px;
@@ -8233,14 +8237,42 @@ button.close {
       text-shadow: 2px 2px 5px #C82425; }
 
 .first-screen {
-  background: url("../img/bg1_1.png") no-repeat;
+  z-index: 20;
+  background-color: transparent;
+  background-image: url("../img/bg1_1.png");
+  background-repeat: no-repeat;
   background-position: -42% -281px;
   background-size: 51%; }
   .first-screen .screen-heading {
     font-size: 54px;
-    text-align: center;
     max-width: 50%;
     margin: 0 auto 60px; }
+  .first-screen .screen-btn {
+    margin: 0 auto; }
+
+.second-screen {
+  z-index: 19; }
+  .second-screen:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -47%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("../img/bg2_1.png");
+    background-repeat: no-repeat;
+    background-position: 126% 0;
+    background-size: 53%; }
+  .second-screen .rewards {
+    padding-top: 250px; }
+    .second-screen .rewards-img {
+      margin-bottom: 25px; }
+    .second-screen .rewards-txt {
+      color: #999;
+      margin-bottom: 15px; }
+    .second-screen .rewards-txt:last-child {
+      margin-bottom: 0; }
 
 a {
   color: #363636; }
