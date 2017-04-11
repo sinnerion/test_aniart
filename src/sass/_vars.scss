@@ -3,9 +3,13 @@ $red-txt: #C82425;
 $gray-txt: #666;
 $red-bg: #ea2d2e;
 
+$main-font: 'robotoregular', sans-serif;
+
 $container-max-widths: (
     sm: 540px,
     md: 720px,
     lg: 960px,
     xl: 1280px
 );
+
+$grid-float-breakpoint: 1024px;

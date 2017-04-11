@@ -1,21 +1,12 @@
 {
-  "name": "bevza",
+  "name": "aniart",
   "version": "1.0.0",
-  "description": "bevza markup",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sinnerion/brandly.git"
+    "url": "git+https://github.com/sinnerion/test_aniart"
   },
   "author": "sinnerion",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sinnerion/brandly/issues"
-  },
-  "homepage": "https://github.com/sinnerion/brandly#readme",
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "gulp": "^3.9.1",

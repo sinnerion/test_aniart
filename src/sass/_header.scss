@@ -1,4 +1,8 @@
 .main-header {
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
   line-height: 60px;
   border-bottom: 1px solid #CBCBCB;
   .container {
@@ -69,6 +73,14 @@
   }
 }
 
+.main-logo {
+  float: left;
+  margin-right: 30px;
+  img {
+    max-width: 100%;
+  }
+}
+
 .login-block {
   .enter-link {
     margin-right: 40px;
@@ -77,4 +89,9 @@
     font-family: 'FontAwesome';
     color: $gray-txt;
   }
+}
+
+.login-block-sm {
+  display: none;
+  float: left;
 }

@@ -1,0 +1,54 @@
+@media only screen
+and (max-width : 991px) {
+  .login-block-sm {
+    display: block;
+  }
+  .screen .screen-heading {
+    font-size: 35px;
+  }
+  .second-screen:before {
+    top: -10%;
+  }
+  .first-screen {
+    background-position: -42% -80%;
+  }
+}
+
+@media only screen
+and (max-width : 600px) {
+  .screen {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+  .screen .screen-heading {
+    font-size: 25px;
+    max-width: 100%;
+  }
+  .main-header .brokers {
+    display: none;
+  }
+  .second-screen .rewards {
+    padding-top: 20px;
+  }
+  .first-screen {
+    background-position: -42% -30%;
+  }
+  .screen-btn {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 0 20px;
+  }
+}
+
+@media only screen
+and (max-width : 479px) {
+  .main-logo {
+    width: 40%;
+  }
+  .login-block .enter-link {
+    margin-right: 20px;
+  }
+  .first-screen {
+    background-position: -42% -20%;
+  }
+}

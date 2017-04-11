@@ -1,0 +1,11 @@
+body {
+  font-family: $main-font;
+}
+
+a {
+  color: $main-txt;
+  &:hover {
+    text-decoration: none;
+    color: $red-txt;
+  }
+}
