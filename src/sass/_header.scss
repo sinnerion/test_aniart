@@ -39,6 +39,22 @@
       color: #fff;
     }
   }
+  .navbar-default .navbar-toggle {
+    margin: 15px 0 0;
+    background: #fff;
+    border: 1px solid $red-txt;
+    &:hover,
+    &:focus {
+      background: lighten($red-bg, 15%);
+    }
+    &:hover .icon-bar,
+    &:focus .icon-bar {
+      background: lighten($red-txt, 45%);
+    }
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background: $red-txt;
+  }
 }
 
 .main-nav.navbar-default {

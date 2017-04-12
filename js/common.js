@@ -10,12 +10,5 @@ $(document).ready(function () {
     }
   });
 
-  // Триггер для отображения элемента brokers на малых разрешениях
-  var brokersSmall = $('.main-header:after');
-  brokersSmall.focus(function () {
-    $('.main-header .brokers').addClass('brokers-visible');
-  });
-  brokersSmall.blur(function () {
-    $('.main-header .brokers').removeClass('brokers-visible');
-  });
+
 });

@@ -8209,6 +8209,17 @@ a {
       display: block;
       text-align: center;
       color: #fff; }
+  .main-header .navbar-default .navbar-toggle {
+    margin: 15px 0 0;
+    background: #fff;
+    border: 1px solid #C82425; }
+    .main-header .navbar-default .navbar-toggle:hover, .main-header .navbar-default .navbar-toggle:focus {
+      background: #f17373; }
+    .main-header .navbar-default .navbar-toggle:hover .icon-bar,
+    .main-header .navbar-default .navbar-toggle:focus .icon-bar {
+      background: #f8d9d9; }
+  .main-header .navbar-default .navbar-toggle .icon-bar {
+    background: #C82425; }
 
 .main-nav.navbar-default {
   margin: 0;
@@ -8319,6 +8330,11 @@ a {
       margin-bottom: 0; }
 
 @media only screen and (max-width: 991px) {
+  .main-nav.navbar-default li a {
+    display: block; }
+  .main-nav.navbar-default li:last-child a {
+    border: none;
+    padding: 0; }
   .login-block-sm {
     display: block; }
   .screen .screen-heading {
@@ -8338,13 +8354,15 @@ a {
   .main-header .brokers {
     display: none; }
   .second-screen .rewards {
-    padding-top: 20px; }
+    padding-top: 20px;
+    text-align: center; }
   .first-screen {
     background-position: -42% -30%; }
   .screen-btn {
     max-width: 100%;
     font-size: 14px;
-    padding: 0 20px; } }
+    padding: 0 20px;
+    margin: 0 auto; } }
 
 @media only screen and (max-width: 479px) {
   .main-logo {

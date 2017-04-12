@@ -1,5 +1,14 @@
 @media only screen
 and (max-width : 991px) {
+  .main-nav.navbar-default li {
+    a {
+      display: block;
+    }
+    &:last-child a {
+      border: none;
+      padding: 0;
+    }
+  }
   .login-block-sm {
     display: block;
   }
@@ -29,6 +38,7 @@ and (max-width : 600px) {
   }
   .second-screen .rewards {
     padding-top: 20px;
+    text-align: center;
   }
   .first-screen {
     background-position: -42% -30%;
@@ -37,6 +47,7 @@ and (max-width : 600px) {
     max-width: 100%;
     font-size: 14px;
     padding: 0 20px;
+    margin: 0 auto;
   }
 }
 
