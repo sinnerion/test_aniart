@@ -18,7 +18,7 @@ const rsync = require('gulp-rsync');
 gulp.task('b-sync', function () {
   browserSync({
     server: {
-      baseDir: './',
+      baseDir: 'src',
     },
     notify: false,
   });
@@ -29,8 +29,8 @@ gulp.task('sass', function () {
     .pipe(autoprefixer(['last 10 versions']))
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('../dist/css'))
+    .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -40,26 +40,25 @@ gulp.task('vendor:js', function () {
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'
   ])
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('dist/js'))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('../dist/js'))
+    .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('app:js', function () {
   return gulp.src('src/js/*.js')
-      .pipe(gulp.dest('dist/js'))
-      .pipe(gulp.dest('js'));
+      .pipe(gulp.dest('../dist/js'));
 });
 
 gulp.task('html-minify', function () {
-  return gulp.src('./*.html')
+  return gulp.src('src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('../dist'));
 });
 
 gulp.task('css-minify', function () {
-  return gulp.src('dist/css/*.css')
+  return gulp.src('../dist/css/*.css')
     .pipe(cleanCss({ compatibility: 'ie8' }))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(gulp.dest('../dist/css'));
 });
 
 gulp.task('images:min', function () {
@@ -70,28 +69,27 @@ gulp.task('images:min', function () {
       svgoPlugins: [{ removeViewBox: false }],
       use: [pngout()],
     })))
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('../dist/img'));
 });
 
 gulp.task('images:copy', function () {
   return gulp.src('src/img/**/*')
-      .pipe(gulp.dest('dist/img'))
-      .pipe(gulp.dest('img'));
+      .pipe(gulp.dest('../dist/img'));
 });
 
 gulp.task('compress', function () {
-  return gulp.src(['dist/js/common.js', 'dist/js/vendor.js'])
+  return gulp.src(['../dist/js/common.js', '../dist/js/vendor.js'])
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('../dist/js'));
 });
 
 gulp.task('fonts', function () {
-  return gulp.src('src/fonts/**/*').pipe(gulp.dest('dist/fonts'));
+  return gulp.src('src/fonts/**/*').pipe(gulp.dest('../dist/fonts'));
 });
 
 gulp.task('watch', ['images:copy', 'fonts', 'sass', 'vendor:js', 'app:js', 'b-sync'], function () {
   gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('src/*.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
